@@ -4,7 +4,7 @@ module.exports = {
     //入口
     entry : [
         'react-hot-loader/patch',
-        'webpack-dev-server/client?http://localhost:8080',
+        'webpack-dev-server/client?http://0.0.0.0:8080',
         'webpack/hot/only-dev-server',
         path.join(__dirname,"js/main.js")
 
@@ -45,7 +45,8 @@ module.exports = {
     devServer: {
         hot: true,
         contentBase: path.join(__dirname, 'dist'),
-        publicPath: '/'
+        publicPath: '/',
+        host:'0.0.0.0'
     },
     resolve : {
         alias : {
