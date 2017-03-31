@@ -16,6 +16,10 @@ module.exports = {
         filename : "[name].bundle.js",
         publicPath:'/'
     },
+    watchOptions: {
+        ignored: /node_modules/,
+        poll: 1000
+    },
     module : {
         // loaders : [
         //     {test:/\.css$/,loader:"style-loader!css-loader"},
