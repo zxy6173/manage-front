@@ -50,7 +50,13 @@ module.exports = {
         hot: true,
         contentBase: path.join(__dirname, 'dist'),
         publicPath: '/',
-        host:'0.0.0.0'
+        host:'0.0.0.0',
+        proxy:{
+          '/api':{
+            target:'http://manage-back:3000',
+            pathRewrite: {'^/api' : ''}
+          }
+        }
     },
     resolve : {
         alias : {

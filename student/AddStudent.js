@@ -16,7 +16,7 @@ class AddStudent extends React.Component {
     handleOk() {
         ajax({
             type:"post",
-            url:"/students/add",
+            url:"/api/students",
             data:this.props.form.getFieldsValue(),
             success:function(){
                 store.dispatch({

@@ -18,8 +18,8 @@ class UpdateStudent extends React.Component {
         var values = this.props.form.getFieldsValue();
         values._id = this.props.studentState.student._id;
         ajax({
-            type:"post",
-            url:"/students/update",
+            type:"put",
+            url:"/students/"+values._id,
             data:values,
             success:function(){
                 store.dispatch({

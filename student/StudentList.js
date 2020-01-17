@@ -11,11 +11,8 @@ class StudentList extends React.Component{
     del(id){
 
         ajax({
-            type:"post",
-            url:"/students/del",
-            data:{
-                _id:id
-            },
+            type:"delete",
+            url:"/api/students/"+id,
             success:function(){
                 this.props.show();
 
@@ -25,10 +22,7 @@ class StudentList extends React.Component{
     showById(id){
         ajax({
             type:"get",
-            url:"/students/find",
-            data:{
-                _id:id
-            },
+            url:"/api/students/"+id,
             success:function(data){
                 store.dispatch({
                     type:"SHOW_STUDENT",

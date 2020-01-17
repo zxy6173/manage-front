@@ -24,7 +24,7 @@ class Student extends React.Component{
     show(page){
         ajax({
             type:"get",
-            url:"/students/find",
+            url:"/api/students",
             data:{
                 page:page,
                 rows:5
